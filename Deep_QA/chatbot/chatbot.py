@@ -33,6 +33,7 @@ from tensorflow.python import debug as tf_debug
 from chatbot.textdata import TextData
 from chatbot.model import Model
 
+from chatbot.solver import Solver
 
 class Chatbot:
     """
@@ -211,65 +212,20 @@ class Chatbot:
             else:
                 raise RuntimeError('Unknown test mode: {}'.format(self.args.test))  # Should never happen
         else:
-            self.mainTrain(self.sess)
+            print("Initializing the solver...")
+            solver = Solver(self.model, self.sess, self.args, self.textData, self.globStep, self.writer)
+            trained = solver.train()
+            self.sess = trained.sess
+            self.model = trained.model
+            self.textData = trained.textData
+
+            #self.Solver.mainTrain(self.sess)
 
         if self.args.test != Chatbot.TestMode.DAEMON:
             self.sess.close()
             print("The End! Thanks for using this program")
 
-    def mainTrain(self, sess):
-        """ Training loop
-        Args:
-            sess: The current running session
-        """
-
-        # Specific training dependent loading
-
-        self.textData.makeLighter(self.args.ratioDataset)  # Limit the number of training samples
-
-        mergedSummaries = tf.summary.merge_all()  # Define the summary operator (Warning: Won't appear on the tensorboard graph)
-        if self.globStep == 0:  # Not restoring from previous run
-            self.writer.add_graph(sess.graph)  # First time only
-
-        # If restoring a model, restore the progression bar ? and current batch ?
-
-        print('Start training (press Ctrl+C to save and exit)...')
-
-        try:  # If the user exit while training, we still try to save the model
-            for e in range(self.args.numEpochs):
-
-                print()
-                print("----- Epoch {}/{} ; (lr={}) -----".format(e+1, self.args.numEpochs, self.args.learningRate))
-
-                batches = self.textData.getBatches()
-
-                # TODO: Also update learning parameters eventually
-
-                tic = datetime.datetime.now()
-                for nextBatch in tqdm(batches, desc="Training"):
-                    # Training pass
-                    ops, feedDict = self.model.step(nextBatch)
-                    assert len(ops) == 2  # training, loss
-                    _, loss, summary = sess.run(ops + (mergedSummaries,), feedDict)
-                    self.writer.add_summary(summary, self.globStep)
-                    self.globStep += 1
-
-                    # Output training status
-                    if self.globStep % 100 == 0:
-                        perplexity = math.exp(float(loss)) if loss < 300 else float("inf")
-                        tqdm.write("----- Step %d -- Loss %.2f -- Perplexity %.2f" % (self.globStep, loss, perplexity))
-
-                    # Checkpoint
-                    if self.globStep % self.args.saveEvery == 0:
-                        self._saveSession(sess)
-
-                toc = datetime.datetime.now()
-
-                print("Epoch finished in {}".format(toc-tic))  # Warning: Will overflow if an epoch takes more than 24 hours, and the output isn't really nicer
-        except (KeyboardInterrupt, SystemExit):  # If the user press Ctrl+C while testing progress
-            print('Interruption detected, exiting the program...')
-
-        self._saveSession(sess)  # Ultimate saving before complete exit
+    # removed mainTrain(self, sess):
 
     def predictTestset(self, sess):
         """ Try predicting the sentences from the samples.txt file.

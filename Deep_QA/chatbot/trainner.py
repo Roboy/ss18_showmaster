@@ -25,7 +25,7 @@ import os
 
 def main():
     """
-    Launch the training with different parametters
+    Launch the training with different parameters
     """
 
     # TODO: define:
@@ -38,7 +38,7 @@ def main():
         "learningRate": [float, [1, 3]]
         }
 
-    # Training multiple times with different parametters
+    # Training multiple times with different parameters
     for i in range(10):
         # Generate the command line arguments
         trainingArgs = ""

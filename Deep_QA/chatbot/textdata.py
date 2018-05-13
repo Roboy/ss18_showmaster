@@ -17,6 +17,8 @@
 Loads the dialogue corpus, builds the vocabulary
 """
 
+from random import shuffle
+
 import numpy as np
 import nltk  # For tokenize
 from tqdm import tqdm  # Progress bar
@@ -88,7 +90,10 @@ class TextData:
         self.eosToken = -1  # End of sequence
         self.unknownToken = -1  # Word dropped from vocabulary
 
-        self.trainingSamples = []  # 2d array containing each question and his answer [[input,target]]
+        self.trainingSamples = []  # 2d array containing each question and its answer for training [[input,target]]
+        self.testSamples = []  # 2d array containing question and answer for testing [[input,target]]
+
+
 
         self.word2id = {}
         self.id2word = {}  # For a rapid conversion (Warning: If replace dict by list, modify the filtering to avoid linear complexity with del)
@@ -305,13 +310,37 @@ class TextData:
             self.word2id = data['word2id']
             self.id2word = data['id2word']
             self.idCount = data.get('idCount', None)
-            self.trainingSamples = data['trainingSamples']
+            TS = data['trainingSamples']
+            #shuffle(TS)
+            l = len(TS)
+            self.testingSamples = TS[0:int(0.1*l)]
+            self.trainingSamples = TS[int(0.1*l)+1:l-1]
+            #data['trainingSamples']
 
             self.padToken = self.word2id['<pad>']
             self.goToken = self.word2id['<go>']
             self.eosToken = self.word2id['<eos>']
             self.unknownToken = self.word2id['<unknown>']  # Restore special words
 
+    #def splitDataset(self):
+        """Load samples from file
+        Args:
+            filename (str): pickle filename
+        """
+        #dataset_path = os.path.join(filename)
+        #print('Loading dataset from {}'.format(dataset_path))
+        #with open(dataset_path, 'rb') as handle:
+        #    data = pickle.load(handle)  # Warning: If adding something here, also modifying saveDataset
+        #    self.word2id = data['word2id']
+        #    self.id2word = data['id2word']
+        #    self.idCount = data.get('idCount', None)
+        #    self.trainingSamples = data['trainingSamples']
+
+        #    self.padToken = self.word2id['<pad>']
+        #    self.goToken = self.word2id['<go>']
+        #    self.eosToken = self.word2id['<eos>']
+        #    self.unknownToken = self.word2id['<unknown>']  # Restore special words
+            
     def filterFromFull(self):
         """ Load the pre-processed full corpus and filter the vocabulary / sentences
         to match the given model options
