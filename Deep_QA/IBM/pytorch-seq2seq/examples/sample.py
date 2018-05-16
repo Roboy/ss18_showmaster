@@ -96,7 +96,7 @@ else:
     optimizer = None
     if not opt.resume:
         # Initialize model
-        hidden_size=4096 #changed from 128 by CK
+        hidden_size=1024 #changed from 128 by CK
         bidirectional = True
         encoder = EncoderRNN(len(src.vocab), max_len, hidden_size, n_layers=2,
                              bidirectional=bidirectional, variable_lengths=True)
@@ -118,7 +118,7 @@ else:
         # optimizer.set_scheduler(scheduler)
 
     # train
-    t = SupervisedTrainer(loss=loss, batch_size=32,
+    t = SupervisedTrainer(loss=loss, batch_size=8,
                           checkpoint_every=50,
                           print_every=10, expt_dir=opt.expt_dir)
 
