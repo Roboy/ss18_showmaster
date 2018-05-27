@@ -223,7 +223,6 @@ class TrainLoop():
         # time elapsed
         logs.append('time:{}s'.format(math.floor(self.train_time.time())))
         logs.append('parleys:{}'.format(self.parleys))
-
         if 'time_left' in train_report:
             logs.append('time_left:{}s'.format(
                          math.floor(train_report.pop('time_left', ""))))
@@ -232,6 +231,7 @@ class TrainLoop():
                          train_report.pop('num_epochs', '')))
         log = '[ {} ] {}'.format(' '.join(logs), train_report)
         print(log)
+
         self.log_time.reset()
 
     def train(self):
