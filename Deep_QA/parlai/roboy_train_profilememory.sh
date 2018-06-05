@@ -2,7 +2,7 @@
 # clear
 #screen -S roboy
 
-python3 ../../../ParlAI/parlai/scripts/train_model.py \
+python3 ../../../ParlAI/examples/train_model.py \
 ############################# Model #############################
 # Model
 -m projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit\
