@@ -36,7 +36,7 @@ if __name__ == '__main__':
         personachat_reweight='use',
         truncate=100,
         rank_candidates=True,
-        validation_every_n_secs=300,
+                        #validation_every_n_secs=300,
         validation_metric='accuracy', #(default: f1)
         validation_metric_mode='max',
         validation_patience=10,
