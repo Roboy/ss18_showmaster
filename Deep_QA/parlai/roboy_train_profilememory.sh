@@ -5,11 +5,11 @@
 python3 ../../../ParlAI/parlai/scripts/train_model.py \
 ############################# Model #############################
 # Model
--m projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit
+-m projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit\
 # Task: define personachat task
--t personachat:self
+-t personachat:self\
 # Model file location
--mf /tmp/profilememconvai2
+-mf /tmp/profilememconvai2\
 ############################# Seq2Seq Arguments #############################
 # size of the hidden layers (default 1024):
 -hs 1024\
