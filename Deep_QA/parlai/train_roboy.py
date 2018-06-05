@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.set_defaults(
         task='convai2:self',
         model='projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit',
-        model_file='/tmp/profilememconvai2',
+        model_file='~/ParlAI/data/models/convai2/profilememory/test_profilememconvai2',
         dict_lower=True,
         dict_include_valid=True,
         dict_maxexs=-1,
@@ -46,6 +46,6 @@ if __name__ == '__main__':
         validation_metric='accuracy', #(default: f1)
         validation_metric_mode='max',
         validation_patience=10,
-        log_every_n_secs=10,
+        log_every_n_secs=5,
     )
     TrainLoop(parser.parse_args()).train()
