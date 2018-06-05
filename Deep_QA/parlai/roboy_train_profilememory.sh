@@ -5,11 +5,11 @@
 python3 ../../../ParlAI/examples/train_model.py \
 ############################# Model #############################
 # Model
--m "projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit"\
+-m 'projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit'\
 # Task: define personachat task
--t personachat:self\
+-t 'personachat:self'\
 # Model file location
--mf /tmp/profilememconvai2\
+-mf '/tmp/profilememconvai2'\
 ############################# Seq2Seq Arguments #############################
 # size of the hidden layers (default 1024):
 -hs 1024\
@@ -55,7 +55,7 @@ python3 ../../../ParlAI/examples/train_model.py \
 # interact during validation?!
 #--personachat_interact False
 # share lookup table among self.lt, self.lt_per, self.e2o (default False):
---personachat_sharelt True
+--personachat_sharelt True\
 # helps print nicer text during interactive mode
 --interactive-mode False\
 --personachat_attnsentlevel True\
@@ -94,7 +94,7 @@ python3 ../../../ParlAI/examples/train_model.py \
 -lfc False\
 ############################# Further Training #############################
 # Batch size
-- bs 128\
+- bs 128\ 
 # Logging
 # >& ../../../ParlAI/data/models/convai2/profilememory/profilememory_log.txt
 #| tee data/models/convai2/profilememory/profilememory.log
