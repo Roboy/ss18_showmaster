@@ -23,12 +23,12 @@ if __name__ == '__main__':
                         #dict_include_valid=True,
         dict_maxexs=-1,
         datatype='train',
-        batchsize=32,
+        batchsize=32, # CUDA runs out of memory otherwise
         encoder='lstm',
-        learningrate=0.001,
-        numlayers=2, #(default: 1)
-        hiddensize=1024,
-        dropout=0.2,
+                        #learningrate=0.001,
+                        #numlayers=2, #(default: 1)
+                        #hiddensize=1024,
+                        #dropout=0.2,
         attention='general',
         personachat_attnsentlevel=True,
         personachat_sharelt=True,

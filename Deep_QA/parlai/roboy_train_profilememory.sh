@@ -1,14 +1,17 @@
 #!/bin/bash
+
 # clear
 #screen -S roboy
 
-python3 ../../../ParlAI/examples/train_model.py -m 'projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit'\
+python3 train_roboy.py \
+############################# Further setup here #############################
 ############################# Model #############################
 # Model
+#-m 'projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit'\
 # Task: define personachat task
--t 'personachat:self'\
+#-t 'personachat:self'\
 # Model file location
--mf '/tmp/profilememconvai2'\
+#-mf '/tmp/profilememconvai2'\
 ############################# Seq2Seq Arguments #############################
 # size of the hidden layers (default 1024):
 -hs 1024\
@@ -91,9 +94,6 @@ python3 ../../../ParlAI/examples/train_model.py -m 'projects.personachat.persona
 -dbf True\
 # load-from-checkpoint
 -lfc False\
-############################# Further Training #############################
-# Batch size
-- bs 128\ 
 # Logging
 # >& ../../../ParlAI/data/models/convai2/profilememory/profilememory_log.txt
 #| tee data/models/convai2/profilememory/profilememory.log
