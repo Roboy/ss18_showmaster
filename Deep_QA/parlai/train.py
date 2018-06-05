@@ -21,10 +21,10 @@ if __name__ == '__main__':
         dict_include_valid=True,
         dict_maxexs=-1,
         datatype='train',
-        batchsize=128,
+        batchsize=32,
         encoder='lstm',
         learningrate=0.001,
-        numlayers=1,
+        numlayers=2, #(default: 1)
         hiddensize=1024,
         dropout=0.2,
         attention='general',
@@ -35,7 +35,7 @@ if __name__ == '__main__':
         truncate=100,
         rank_candidates=True,
         validation_every_n_secs=3,
-        validation_metric='accuracy',
+        validation_metric='accuracy', #(default: f1)
         validation_metric_mode='max',
         validation_patience=10,
         log_every_n_secs=10,
