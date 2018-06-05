@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.set_defaults(
         task='convai2:self',
         model='projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit',
-        model_file='~/ParlAI/data/models/convai2/profilememory/test_profilememconvai2',
+        model_file='~/ParlAI/data/models/convai2/profilememory/profilememconvai2',
         dict_lower=True,
         dict_include_valid=True,
         dict_maxexs=-1,
