@@ -5,7 +5,7 @@
 python3 ../../../ParlAI/examples/train_model.py \
 ############################# Model #############################
 # Model
--m projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit\
+-m "projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit"\
 # Task: define personachat task
 -t personachat:self\
 # Model file location
