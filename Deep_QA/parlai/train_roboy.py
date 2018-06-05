@@ -8,6 +8,8 @@ These parameters have some variance in their final perplexity, but they were
 used to achieve the pre-trained model.
 """
 
+# only used for very basic setup. Use shell script for hyperparameter definition
+
 from parlai.scripts.train_model import setup_args, TrainLoop
 
 
@@ -17,8 +19,8 @@ if __name__ == '__main__':
         task='convai2:self',
         model='projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit',
         model_file='/tmp/profilememconvai2',
-        dict_lower=True,
-        dict_include_valid=True,
+                        #dict_lower=True,
+                        #dict_include_valid=True,
         dict_maxexs=-1,
         datatype='train',
         batchsize=32,
@@ -34,9 +36,9 @@ if __name__ == '__main__':
         personachat_reweight='use',
         truncate=100,
         rank_candidates=True,
-        validation_every_n_secs=3,
-        validation_metric='accuracy', #(default: f1)
-        validation_metric_mode='max',
+        validation_every_n_secs=300,
+                        #validation_metric='accuracy', #(default: f1)
+                        #validation_metric_mode='max',
         validation_patience=10,
         log_every_n_secs=10,
     )
