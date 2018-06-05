@@ -37,8 +37,8 @@ if __name__ == '__main__':
         truncate=100,
         rank_candidates=True,
         validation_every_n_secs=300,
-                        #validation_metric='accuracy', #(default: f1)
-                        #validation_metric_mode='max',
+        validation_metric='accuracy', #(default: f1)
+        validation_metric_mode='max',
         validation_patience=10,
         log_every_n_secs=10,
     )
