@@ -1,10 +1,8 @@
 #!/bin/bash
-
-clear
-
+# clear
 #screen -S roboy
 
-python3 ../../../ParlAI/projects/convai2/baselines/profilememory/train.py \
+python3 ../../../ParlAI/parlai/scripts/train_model.py \
 ############################# Model #############################
 # Model
 -m projects.personachat.persona_seq2seq:PersonachatSeqseqAgentSplit
