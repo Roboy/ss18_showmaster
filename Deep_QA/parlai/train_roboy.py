@@ -45,7 +45,7 @@ if __name__ == '__main__':
                         #validation_every_n_secs=300,
         validation_metric='accuracy', #(default: f1)
         validation_metric_mode='max',
-        validation_patience=10,
+                        #validation_patience=10,
         log_every_n_secs=5,
     )
     TrainLoop(parser.parse_args()).train()
