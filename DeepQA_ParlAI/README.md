@@ -1,9 +1,8 @@
 ## Setup
 ### Requirements:
-- Python 36
 - ParlAI
-- [PyTorch](http://pytorch.org/)
 - ss18_showmaster
+- Python 36 environment incl. [PyTorch](http://pytorch.org/)
 
 ### Installing ParlAI
 
