@@ -69,4 +69,7 @@ You can see examples of models prepared for the original (non-competition) Perso
 ## ParlAI Support
 ParlAI is currently maintained by Emily Dinan, Alexander H. Miller, Kurt Shuster, Jack Urbanek and Jason Weston, a very helpful team. If you have any questions, bug reports or feature requests, post on their [Github Issues page](https://github.com/facebookresearch/ParlAI/issues) and issues will usually be resolved within hours (NY time!).
 
-
+## Requirements
+- jupyter (for analysis)
+- matplotlib (for analysis)
+- websockets (for ROS)
