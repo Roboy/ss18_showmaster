@@ -9,7 +9,7 @@ There are many many options and arguments, your best source to get an overview i
 ### Pre-trained models & fine-tuning
 - There are pre-trained models available through model zoo. get them for instance through running python projects/convai2/baselines/profilememory/interactive.py from the ParlAI folder
 - copy profilememory_convai2_model to /tmp/, this is where models will end up
-- when calling the training, include --dict-file models:convai2/profilememory/profilememory_convai2.dict in the call. This will make the training script load profilememory_convai2_model from /tmp/
+- when calling the training, include --dict-file models:convai2/profilememory/profilememory_convai2.dict in the call. This will make the training script load profilememory_convai2_model from /tmp/ (see [ParlAI Github Issue 823](https://github.com/facebookresearch/ParlAI/issues/823))
 
 ## How To: Set up training
 - go to shell script in ss18_showmaster/DeepQA_ParlAI/train

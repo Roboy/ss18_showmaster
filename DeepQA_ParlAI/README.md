@@ -1,7 +1,7 @@
 ## Setup
 ### Requirements:
-- ParlAI
-- ss18_showmaster
+- [ParlAI](https://github.com/facebookresearch/ParlAI)
+- [ss18_showmaster](https://github.com/Roboy/ss18_showmaster)
 - Python 36 environment incl. [PyTorch](http://pytorch.org/)
 
 ### Installing ParlAI
@@ -37,21 +37,8 @@ python ~/ParlAI/examples/display_data.py -t convai2 -dt train
 
 You can run examples of training on this task in the `baselines` folder in this directory.
 
-For example, you can download and interact with a pre-trained seq2seq model (based on ParlAI's implementation in parlai/agents/seq2seq) using `baselines/seq2seq/interact.py`, or train your own with the same parameters using the `train.py` file in that directory.
-
-Train a seq2seq model on the "10k training examples" bAbI task 1 with batch size of 32 examples until accuracy reaches 95% on validation (requires pytorch):
-```bash
-python examples/train_model.py -t babi:task10k:1 -m seq2seq -mf /tmp/model_s2s -bs 32 -vtim 30 -vcut 0.95
-```
-
-Trains an attentive LSTM model on the SQuAD dataset with a batch size of 32 examples (pytorch and regex):
-```bash
-python examples/train_model.py -m drqa -t squad -bs 32 -mf /tmp/model_drqa
-```
-
-Tests an existing attentive LSTM model (DrQA reader) on the SQuAD dataset from our model zoo:
-```bash
-python examples/eval_model.py -t squad -mf "models:drqa/squad/model"
+Interact with profilememory model (downloaded from our model zoo if not available yet):
+```python projects/convai2/baselines/profilememory/interactive.py 
 ```
 
 ## Remarks on dataset versions
