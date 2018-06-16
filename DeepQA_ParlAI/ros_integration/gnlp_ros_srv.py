@@ -21,10 +21,10 @@ from chatbot import chatbot
         i = 1 # counter for the service request IDs
         
     #### prepare the model ####
-        from parlai.core.build_data import download_models
-        from parlai.core.params import ParlaiParser
-        from parlai.scripts.interactive import interactive
-
+        from parlai.core.agents import create_agent
+        #from parlai.core.ROS_worlds import create_task
+        from ROS_worlds import create_task
+        
         opt = {'task': None, 'download_path': '/Users/christoph/Documents/Roboy/ParlAI/downloads', \
                'datatype': 'train', 'image_mode': 'raw', 'numthreads': 1, 'hide_labels': False, 'batchsize': 1, \
                'include_labels': True, 'datapath': '/Users/christoph/Documents/Roboy/ParlAI/data', \
@@ -45,19 +45,6 @@ from chatbot import chatbot
                'use_persona': 'self', 'parlai_home': '/Users/christoph/Documents/Roboy/ParlAI', 'override': {}, \
                'starttime': 'Jun15_16-58'}
         opt['model_type'] = 'profilememory' # for builder
-        # build profile memory models
-        fnames = ['profilememory_convai2_model',
-                  'profilememory_convai2.dict']
-        download_models(opt, fnames, 'convai2', use_model_type=True)
-
-        from parlai.core.params import ParlaiParser
-        from parlai.core.agents import create_agent
-        #from parlai.core.ROS_worlds import create_task
-        from ROS_worlds import create_task
-        from parlai.agents.local_human.local_human import LocalHumanAgent
-
-        import random
-
         opt['task'] = 'parlai.agents.local_human.local_human:LocalHumanAgent'
 
         # Create model and assign it to the specified task
