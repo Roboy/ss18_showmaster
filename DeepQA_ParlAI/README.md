@@ -3,6 +3,10 @@
 - [ParlAI](https://github.com/facebookresearch/ParlAI)
 - [ss18_showmaster](https://github.com/Roboy/ss18_showmaster)
 - Python 36 environment incl. [PyTorch](http://pytorch.org/)
+- jupyter (for analysis)
+- matplotlib (for analysis)
+- websockets (for ROS)
+- training requirements specified in according README
 
 ### Installing ParlAI
 
@@ -38,7 +42,8 @@ python ~/ParlAI/examples/display_data.py -t convai2 -dt train
 You can run examples of training on this task in the `baselines` folder in this directory.
 
 Interact with profilememory model (downloaded from our model zoo if not available yet):
-```python projects/convai2/baselines/profilememory/interactive.py 
+```
+python projects/convai2/baselines/profilememory/interactive.py 
 ```
 
 ## Remarks on dataset versions
@@ -56,7 +61,3 @@ You can see examples of models prepared for the original (non-competition) Perso
 ## ParlAI Support
 ParlAI is currently maintained by Emily Dinan, Alexander H. Miller, Kurt Shuster, Jack Urbanek and Jason Weston, a very helpful team. If you have any questions, bug reports or feature requests, post on their [Github Issues page](https://github.com/facebookresearch/ParlAI/issues) and issues will usually be resolved within hours (NY time!).
 
-## Requirements
-- jupyter (for analysis)
-- matplotlib (for analysis)
-- websockets (for ROS)
