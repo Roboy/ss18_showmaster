@@ -26,8 +26,13 @@ the Snapchat-Game that communicates with the Vision Server and requests the desi
 
 ## How to run it
 Start a roscore
+
 $roscore
+
 Start the vision server
+
 $rosrun <package> <module>
+  
 Start the dialog
+
 mvn exec:java -Dexec.mainClass="roboy.dialog.DialogSystem"
