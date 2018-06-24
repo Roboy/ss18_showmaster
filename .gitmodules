@@ -1,15 +1,21 @@
 [submodule "roboy_communication"]
 	path = roboy_communication
 	url = https://github.com/Roboy/roboy_communication.git
+	ignore = untracked
 [submodule "roboy_dialog"]
 	path = roboy_dialog
 	url = https://github.com/Roboy/roboy_dialog.git
+	ignore = untracked
 [submodule "RoboyUnityFace"]
 	path = RoboyUnityFace
 	url = git@github.com:Roboy/RoboyUnityFace.git
+	ignore = untracked
 [submodule "roboy_face"]
 	path = roboy_face
 	url = git@github.com:Roboy/roboy_face.git
 [submodule "roboy_vision"]
 	path = roboy_vision
 	url = https://github.com/Roboy/roboy_vision
+[submodule "ParlAI"]
+	path = ParlAI
+	url = https://github.com/Roboy/ParlAI.git
