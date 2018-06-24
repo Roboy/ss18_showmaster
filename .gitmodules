@@ -10,3 +10,6 @@
 [submodule "roboy_face"]
 	path = roboy_face
 	url = git@github.com:Roboy/roboy_face.git
+[submodule "ParlAI"]
+	path = ParlAI
+	url = https://github.com/Roboy/ParlAI.git
