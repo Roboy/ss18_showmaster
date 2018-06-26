@@ -26,9 +26,10 @@ The ROS Service Server receives service calls from the dialog as Strings that ho
 ### 4. Dialog Games
 The Dialog implements two games: 
 
-The 20 questions game using an Akinator Wrapper API that is run in children protection mode and 
+- The 20 questions game using an Akinator Wrapper API that is run in children protection mode and 
 
-the Snapchat-Game that communicates with the Vision Server and requests the desired filters through service calls.
+- the Snapchat-Game that communicates with the Vision Server and requests the desired filters through service calls.
+
 
 ## Getting Started
 
