@@ -14,25 +14,26 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 
 ## How it works
 
-# 1. Facial Expressions
+### 1. Facial Expressions
 are implemented in Unity ....
 
-# 2. Generative Models
+### 2. Generative Models
 uses ParlAI ....
 
-# 3. Vision Module
+### 3. Vision Module
 The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The vision module streams the video information from Roboy's camera to an iPad and applies the requested filter to the detected faces. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time. Following filters have been implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow.
 
-# 4. Dialog Games
+### 4. Dialog Games
 The Dialog implements two games: 
 
--The 20 questions game using an Akinator Wrapper API that is run in children protection mode and 
--the Snapchat-Game that communicates with the Vision Server and requests the desired filters through service calls.
+The 20 questions game using an Akinator Wrapper API that is run in children protection mode and 
+
+the Snapchat-Game that communicates with the Vision Server and requests the desired filters through service calls.
 
 ## Getting Started
 
-Start roscore in terminal with `roscore`
+- Start roscore in terminal with `roscore`
 
-In a new terminal, go to /roboy_snapchat_filter/scripts/ directory and start the vision server with `rosrun roboy_snapchat_filter snapchat_server.py`
+- In a new terminal, go to /roboy_snapchat_filter/scripts/ directory and start the vision server with `rosrun roboy_snapchat_filter snapchat_server.py`
   
-Start the dialog with `mvn exec:java -Dexec.mainClass="roboy.dialog.DialogSystem"`
+- Start the dialog with `mvn exec:java -Dexec.mainClass="roboy.dialog.DialogSystem"`
