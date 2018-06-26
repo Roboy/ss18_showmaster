@@ -24,9 +24,7 @@ In addition to the old faces and expression in Unity, the following faces are ad
  - *but how*?
 
 ### 2. Generative Models
-
-
-
+The old Generative Model was neither a state of the art implementation nor did it use a state of the art dataset as a basis. The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/facebookresearch/ParlAI/). There, several possible implementations as well as several datasets are integrated in one platform. 
 
 ### 3. Vision Module
 The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The vision module streams the video information from Roboy's camera to an iPad and applies the requested filter to the detected faces. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time. Following filters have been implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow.
