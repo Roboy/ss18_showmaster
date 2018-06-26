@@ -48,39 +48,39 @@ The Dialog implements two games:
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
 
 ### Running ROS service
-- Start rosmaster in terminal with `roscore`
+- Start rosmaster in terminal with 
+```
+roscore
+```
 
 #### Emotions
+
+
 #### ParlAI
 - in terminal, run 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
 ```
-
 - in a new terminal
 - activate virtual environment 
 - in `ss18_showmaster/DeepQA_ParlAI/ros_integration` run 
 ```
 python gnlp_ros_srv.py
 ```
-
-- in another terminal
-- get available services through running `rosservice list`
-- run 
-```
-(catkin_ws)/devel/setup.bash
-```
-with (catkin_ws) being the location of your catkin workspace such as `Documents/Roboy/catkin_ws`
-```
-rosservice call /roboy/cognition/generative_nlp/answer "text_input: 'hello'"
-```
 #### Snapchat
-- In a new terminal, go to /roboy_snapchat_filter/scripts/ directory and start the vision server with `rosrun roboy_snapchat_filter snapchat_server.py`
+- In a new terminal, go to /roboy_snapchat_filter/scripts/ directory and start the vision server with 
+```
+rosrun roboy_snapchat_filter snapchat_server.py
+```
 #### Games
-- Start the dialog with 
+- included in dialog
+
+#### Start Dialog
+**!make sure ros servers are running before attempting to start dialog!**
+- execute
 ```
 java -Xmx6g -d64 -cp dialog/target/roboy-dialog-system-2.1.9-jar-with-dependencies.jar \
 roboy.dialog.DialogSystem- 
 ```
-- make sure snapchat is running before attempting to run dialog!
+
 
