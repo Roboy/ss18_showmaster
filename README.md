@@ -15,7 +15,11 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 ## How it works
 
 ### 1. Facial Expressions
-are implemented in Unity ....
+In addition to the old faces and expression in Unity, the following faces are added and can be triggered via ROS:
+ - suprised Roboy
+ - crying Roboy
+ - irritated Roboy
+ - Roboy wearing sunglasses
 
 ### 2. Generative Models
 uses ParlAI ....
