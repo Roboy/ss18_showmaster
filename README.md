@@ -22,7 +22,37 @@ In addition to the old faces and expression in Unity, the following faces are ad
  - Roboy wearing sunglasses
 
 ### 2. Generative Models
-uses ParlAI ....
+#### Prerequisites
+
+- you need a full model setup. From scratch, the easiest way to achieve this is to go to the ParlAI folder and run
+```
+python projects/convai2/baselines/profilememory/interactive.py 
+```
+#### 1. Rosbridge Websocket
+- in terminal, run 
+```
+roslaunch rosbridge_server rosbridge_websocket.launch
+```
+
+#### 2. Start Model
+- in a new terminal
+- activate virtual environment 
+- in `ss18_showmaster/DeepQA_ParlAI/ros_integration` run 
+```
+python gnlp_ros_srv.py
+```
+
+#### 3. Test the Service
+- in another terminal
+- get available services through running `rosservice list`
+- run 
+```
+(catkin_ws)/devel/setup.bash
+```
+with (catkin_ws) being the location of your catkin workspace such as `Documents/Roboy/catkin_ws`
+```
+rosservice call /roboy/cognition/generative_nlp/answer "text_input: 'hello'"
+```
 
 ### 3. Vision Module
 The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The vision module streams the video information from Roboy's camera to an iPad and applies the requested filter to the detected faces. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time. Following filters have been implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow.
