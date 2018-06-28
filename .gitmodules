@@ -6,10 +6,6 @@
 	path = roboy_dialog
 	url = https://github.com/Roboy/roboy_dialog.git
 	ignore = untracked
-[submodule "RoboyUnityFace"]
-	path = RoboyUnityFace
-	url = git@github.com:Roboy/RoboyUnityFace.git
-	ignore = untracked
 [submodule "roboy_face"]
 	path = roboy_face
 	url = git@github.com:Roboy/roboy_face.git
