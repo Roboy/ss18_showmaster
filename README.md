@@ -16,12 +16,14 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 
 
 ### 1. Facial Expressions
-In addition to the old faces and expression in Unity, the following faces are added and can be triggered via ROS:
+In addition to the old faces and expressions in Unity, the following faces & emotions were added by animating them in Unity and and can be triggered via ROS:
  - suprised Roboy
  - crying Roboy
  - irritated Roboy
  - Roboy wearing sunglasses
- - *but how*?
+ 
+ The animations can be triggered via the code using Microsoft Visual Studies in RoboyUnityFace/Assets/RoboyAnimator.cs 
+ The corresponding computers must be connected using the same IP-address. Emotions can now be triggered via ROS. 
 
 ### 2. Generative Models
 The old Generative Model was neither a state of the art implementation nor did it use a state of the art dataset as a basis. The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/facebookresearch/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
@@ -52,7 +54,19 @@ roscore
 ```
 
 #### Emotions
-***Julian insert stuff here
+
+Install Unity on your computer and pull RoboyUnityFace from GitHub. 
+
+In order to test the animations, it is necessary to disconnect from ROS. This can be reached by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.  
+
+```
+bool offlineToggle = true;
+```
+
+Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. 
+
+Additional faces can be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
+
 
 #### ParlAI
 - in terminal, run 
