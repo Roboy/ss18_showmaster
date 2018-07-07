@@ -1,5 +1,5 @@
 # ss18_showmaster
-Roboy wishes to be more entertaining and impressive. With his new skills he is reliably able to attract people to its presence independent to their relation to him. He appeals as well to an audience as to a group of developers, satisfying both of their preferences.
+Roboy is more fun and easy to control on fairs or other events with audience.
 
 
 ## About
