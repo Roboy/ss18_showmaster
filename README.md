@@ -1,5 +1,5 @@
 # ss18_showmaster
-Roboy is more fun and easy to control on fairs or other events with audience.
+Roboy wants to be more entertaining and fun on fairs and other events with audience. Additionally, he is easy to control for us as developers.
 
 
 ## About
@@ -16,25 +16,28 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 
 
 ### 1. Facial Expressions
-In addition to the old faces and expression in Unity, the following faces are added and can be triggered via ROS:
+In addition to the old faces and expressions in Unity, the following faces & emotions were added by animating them in Unity and and can be triggered via ROS:
  - suprised Roboy
  - crying Roboy
  - irritated Roboy
  - Roboy wearing sunglasses
- - *but how*?
+ 
 
-### 2. Generative Models
-The old Generative Model was neither a state of the art implementation nor did it use a state of the art dataset as a basis. The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/facebookresearch/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
+### 2. Generative Models for Chitchat as a Fallback-Answer
+The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/facebookresearch/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
 
-### 3. Vision Module
-The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The vision module streams the video information from Roboy's camera to an iPad and applies the requested filter to the detected faces. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time. Following filters have been implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow.
+### 3. Snapchat Module
+This module is able to apply filter masks on the interlocutor's face. Following filters are implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time.
+The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The snapchat module then uses the video information from Roboy's camera to appliy the requested filter onto the detected faces.
 
 ### 4. Dialog Games
-The Dialog implements two games: 
+Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_dialog) are implemented: 
 
-- The 20 questions game using an Akinator Wrapper API that is run in children protection mode and 
+- The 20 questions game using an [Akinator Wrapper API](https://github.com/markozajc/Akiwrapper) that is run in children protection mode
 
-- the Snapchat-Game that communicates with the Vision Server and requests the desired filters through service calls.
+- The snapchat game where the user can request a specific face mask to be applied by the snapchat module based on ROS service calls communication with the aforementioned module
+
+- A Choose Game State where Roboy suggests one of the above mentioned games by random choice or the interlocutor can selcet a preferred game
 
 
 ## Getting Started
@@ -52,7 +55,19 @@ roscore
 ```
 
 #### Emotions
-***Julian insert stuff here
+
+Install Unity on your computer and pull RoboyUnityFace from GitHub. 
+
+In order to test the animations, it is necessary to disconnect from ROS. This can be reached by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.  
+
+```
+bool offlineToggle = true;
+```
+
+Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. 
+
+Additional faces can be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
+
 
 #### ParlAI
 - in terminal, run 
@@ -66,19 +81,14 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 python gnlp_ros_srv.py
 ```
 #### Snapchat
-- In a new terminal, go to /roboy_snapchat_filter/scripts/ directory and start the vision server with 
+- In a new terminal run
+```
+cd roboy_snapchat/roboy_snapchat_filter/scripts/
+```
+here, start the snapchat server with
 ```
 rosrun roboy_snapchat_filter snapchat_server.py
 ```
 #### Games
-- included in dialog
-
-#### Start Dialog
 **!make sure ros servers are running before attempting to start dialog!**
-- execute
-```
-java -Xmx6g -d64 -cp dialog/target/roboy-dialog-system-2.1.9-jar-with-dependencies.jar \
-roboy.dialog.DialogSystem- 
-```
-
-
+- Start the dialog accoring to the instructions mentioned [here](http://roboydialog.readthedocs.io/en/master/Usage/0_installation.html) 
