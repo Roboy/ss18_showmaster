@@ -48,7 +48,7 @@ Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_di
 - for Games refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
 
-### Running ROS service
+### Running ROS-Master
 - Start rosmaster in terminal with 
 ```
 roscore
@@ -58,7 +58,7 @@ roscore
 
 Install Unity on your computer and pull RoboyUnityFace from GitHub. 
 
-In order to test the animations, it is necessary to disconnect from ROS. This can be reached by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.  
+In order to test the animations, it is necessary to disconnect from ROS. This can be reached by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
 
 ```
 bool offlineToggle = true;
@@ -81,7 +81,7 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 python gnlp_ros_srv.py
 ```
 #### Snapchat
-- In a new terminal run
+- In a new terminal change directory to
 ```
 cd roboy_snapchat/roboy_snapchat_filter/scripts/
 ```
@@ -91,4 +91,4 @@ rosrun roboy_snapchat_filter snapchat_server.py
 ```
 #### Games
 **!make sure ros servers are running before attempting to start dialog!**
-- Start the dialog accoring to the instructions mentioned [here](http://roboydialog.readthedocs.io/en/master/Usage/0_installation.html) 
+- Start the dialog according to the instructions mentioned [here](http://roboydialog.readthedocs.io/en/master/Usage/0_installation.html)
