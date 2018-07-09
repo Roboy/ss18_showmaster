@@ -70,6 +70,12 @@ Additional faces can be added. Useful tutorials for starting with Unity can be f
 
 
 #### ParlAI
+Prerequisites
+- ParlAI setup as described [here](https://github.com/Roboy/ParlAI/)
+- Profilememory model. From scratch, the easiest way to achieve this is to run
+```
+python projects/convai2/baselines/profilememory/interactive.py 
+```
 - in terminal, run 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
@@ -80,6 +86,11 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 ```
 python gnlp_ros_srv.py
 ```
+- to talk to the model use ROS service call
+```
+rosservice call /roboy/cognition/generative_nlp/answer "text_input: 'hello'"
+```
+
 #### Snapchat
 - In a new terminal change directory to
 ```
