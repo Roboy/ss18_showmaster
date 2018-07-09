@@ -76,6 +76,7 @@ Prerequisites
 ```
 python projects/convai2/baselines/profilememory/interactive.py 
 ```
+Interaction through ROS
 - in terminal, run 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
