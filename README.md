@@ -81,7 +81,7 @@ python projects/convai2/baselines/profilememory/interactive.py
 roslaunch rosbridge_server rosbridge_websocket.launch
 ```
 - in a new terminal
-- activate the python 36 environment you set up when preparing to work with ParlAI as described [here](https://github.com/Roboy/ParlAI/)
+- activate the python 3.6. environment you set up when preparing to work with ParlAI as described [here](https://github.com/Roboy/ParlAI/)
 - in `ss18_showmaster/ParlAI/ros_integration` run 
 ```
 python gnlp_ros_srv.py
