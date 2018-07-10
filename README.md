@@ -17,7 +17,9 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 
 ### 1. Facial Expressions
 
-For starting with Unity, clone the repository to your device. For seeing the actual version of Roboy in Unity, go to RoboyUnityFace/assets and open RoboyFace. All Animations are stored in RoboyUnityFace/assets/animations. Corresponding material (for e.g. adding pictures) are stored in RoboyUnityFace/assets/FaceComponents.
+Roboy's facial expressions are animated in Unity. The corresponding repository is in https://github.com/Roboy/RoboyUnityFace  
+
+For starting with Unity, clone the repository to your device. For seeing the actual face of Roboy in Unity, go to RoboyUnityFace/assets and open RoboyFace. All existing animations are stored in RoboyUnityFace/assets/animations. Corresponding material (added pictures to show them on the face, e.g. a moustache or sunglasses) are stored in RoboyUnityFace/assets/FaceComponents.
 
 The connection to ROS via code (C#) is stored in RoboyUnityFace/assets/RoboyAnimator.cs
 
@@ -67,17 +69,17 @@ roscore
 
 #### Emotions
 
-Install Unity on your computer and pull RoboyUnityFace from GitHub. 
+Install Unity on your computer and clone the repository /RoboyUnityFace from GitHub. 
 
-In order to test the animations, it is necessary to disconnect from ROS. This can be reached by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
+In order to start the animations, it is necessary to disconnect from ROS. Otherwise, Unity will show an error message.  This can be avoided by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs . The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
 
 ```
 bool offlineToggle = true;
 ```
 
-Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. 
+Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. More detailed information is written in the upper section howitworks. 
 
-Additional faces can be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
+Additional faces could be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
 
 
 #### ParlAI
