@@ -37,7 +37,7 @@ In addition to the old faces and expressions in Unity, the following faces & emo
  
 
 ### 2. Generative Models for Chitchat as a Fallback-Answer
-The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/facebookresearch/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
+The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/Roboy/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
 
 ### 3. Snapchat Module
 This module is able to apply filter masks on the interlocutor's face. Following filters are implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time.
@@ -57,7 +57,7 @@ Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_di
 
 ### Prequisites and Setup
 - for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace)
-- for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/)
+- for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/projects/roboy/)
 - for Games refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
 
@@ -96,7 +96,7 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 ```
 - in a new terminal
 - activate the python 3.6. environment you set up when preparing to work with ParlAI as described [here](https://github.com/Roboy/ParlAI/)
-- in `ss18_showmaster/ParlAI/ros_integration` run 
+- in `ss18_showmaster/ParlAI/projects/roboy/ros_integration` run 
 ```
 python gnlp_ros_srv.py
 ```
