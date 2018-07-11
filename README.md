@@ -34,6 +34,8 @@ In addition to the old faces and expressions in Unity, the following faces & emo
  - crying Roboy
  - irritated Roboy
  - Roboy wearing sunglasses
+ - Roboy wearing spectacles
+ - Roboy having a moustache
  
 
 ### 2. Generative Models for Chitchat as a Fallback-Answer
@@ -69,7 +71,11 @@ roscore
 
 #### Emotions
 
-Install Unity on your computer and clone the repository /RoboyUnityFace from GitHub. 
+Prerequesites: - Installation of Unity
+
+To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git on your computer. 
+
+More detailed information is written in the upper section howitworks. 
 
 In order to start the animations, it is necessary to disconnect from ROS. Otherwise, Unity will show an error message.  This can be avoided by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs . The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
 
@@ -77,7 +83,7 @@ In order to start the animations, it is necessary to disconnect from ROS. Otherw
 bool offlineToggle = true;
 ```
 
-Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. More detailed information is written in the upper section howitworks. 
+Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. 
 
 Additional faces could be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
 
