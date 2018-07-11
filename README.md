@@ -58,7 +58,7 @@ Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_di
 ## Getting Started
 
 ### Prequisites and Setup
-- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace)
+- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace) --> go to face_julian branch
 - for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/tree/master/projects/roboy)
 - for Games refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
