@@ -18,16 +18,7 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 ### 1. Facial Expressions
 
 Roboy's facial expressions are animated in Unity. The corresponding repository is in https://github.com/Roboy/RoboyUnityFace  
-
-For starting with Unity, clone the repository to your device. For seeing the actual face of Roboy in Unity, go to RoboyUnityFace/assets and open RoboyFace. All existing animations are stored in RoboyUnityFace/assets/animations. Corresponding material (added pictures to show them on the face, e.g. a moustache or sunglasses) are stored in RoboyUnityFace/assets/FaceComponents.
-
-The connection to ROS via code (C#) is stored in RoboyUnityFace/assets/RoboyAnimator.cs
-
-Having started RoboyFace in Unity,there is a Project window. For viewing all existing animations, first click on "face" in the Project Window. In a second step, open the "Animator" window. For viewing existing animations, press the play button on the top and trigger the animations in the "Animator" (Paramters) window. New animations can be added via the Animation window (if the animation or the Animator window is not shown, you can open it by clicking on the "Window" button at the bar on the top of Unity program). 
-
-For all current and new animations, there is the Inspector on the right hand side, which has different functions for changing or modifying existing and new animations. 
-
-If new animations were created, you must add transitions from the idle status to the animation status and back to the idle status. This can also be done in the Animator window. 
+Futher instructions and documentation can be found in the README in the branch face_julian at https://github.com/Roboy/RoboyUnityFace
 
 In addition to the old faces and expressions in Unity, the following faces & emotions were added in SS18 by animating them in Unity and can be triggered via ROS:
  - suprised Roboy
@@ -37,12 +28,11 @@ In addition to the old faces and expressions in Unity, the following faces & emo
  - Roboy wearing spectacles
  - Roboy having a moustache
  
-
 ### 2. Generative Models for Chitchat as a Fallback-Answer
 The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/Roboy/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
 
 ### 3. Snapchat Module
-The [Roboy Snapchat module](https://github.com/Roboy/roboy_snapchat/) is able to apply filter masks on the interlocutor's face. Following filters are implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time.
+This module is able to apply filter masks on the interlocutor's face. Following filters are implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time.
 The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The snapchat module then uses the video information from Roboy's camera to appliy the requested filter onto the detected faces.
 
 ### 4. Dialog Games
