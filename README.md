@@ -124,7 +124,7 @@ ROS_ENABLED: true
 ```
 - Connect to the proper IP-Adress:
 ```
-ROS_MASTER_IP:
+ROS_MASTER_IP: XXX.XX.XX.XX
 ```
 - enable ROS-Packages:
 ```
