@@ -106,11 +106,7 @@ rosservice call /roboy/cognition/generative_nlp/answer "text_input: 'hello'"
 ```
 
 #### Snapchat
-- In a new terminal change directory to
-```
-cd roboy_snapchat/roboy_snapchat_filter/scripts/
-```
-here, start the snapchat server with
+- In a new terminal start the snapchat server with
 ```
 rosrun roboy_snapchat_filter snapchat_server.py
 ```
