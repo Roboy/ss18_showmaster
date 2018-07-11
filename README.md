@@ -90,5 +90,19 @@ here, start the snapchat server with
 rosrun roboy_snapchat_filter snapchat_server.py
 ```
 #### Games
+In config.properties make sure the following parameters are set correctly:
+- enable ROS
+```
+ROS_ENABLED: true
+```
+- Connect to the proper IP-Adress:
+```
+ROS_MASTER_IP:
+```
+- enable ROS-Packages:
+```
+ROS_ACTIVE_PKGS:
+- roboy_filters
+```
 **!make sure ros servers are running before attempting to start dialog!**
 - Start the dialog according to the instructions mentioned [here](http://roboydialog.readthedocs.io/en/master/Usage/0_installation.html)
