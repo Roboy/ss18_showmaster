@@ -48,7 +48,7 @@ Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_di
 ## Getting Started
 
 ### Prequisites and Setup
-- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace) --> go to face_julian branch
+- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace) --> go to the branch: face_julian 
 - for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/tree/master/projects/roboy)
 - for Games refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
@@ -61,11 +61,12 @@ roscore
 
 #### Emotions
 
-Prerequesites: - Installation of Unity
+Prerequesites: 
+- Installation of Unity
 
 To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git on your computer. 
 
-More detailed information is written in the upper section howitworks. 
+More detailed information is given in the README in the branch face_julian at https://github.com/Roboy/RoboyUnityFace
 
 In order to start the animations, it is necessary to disconnect from ROS. Otherwise, Unity will show an error message.  This can be avoided by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs . The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
 
