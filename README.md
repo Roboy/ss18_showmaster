@@ -18,7 +18,7 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 ### 1. Facial Expressions
 
 Roboy's facial expressions are animated in Unity. The corresponding repository is in https://github.com/Roboy/RoboyUnityFace  
-Futher instructions and documentation can be found in the README in the branch face_julian at https://github.com/Roboy/RoboyUnityFace
+Futher instructions and documentation can be found in the README https://github.com/Roboy/RoboyUnityFace/tree/face_julian 
 
 In addition to the old faces and expressions in Unity, the following faces & emotions were added in SS18 by animating them in Unity and can be triggered via ROS:
  - suprised Roboy
@@ -66,7 +66,7 @@ Prerequesites:
 
 To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git on your computer. 
 
-More detailed information is given in the README in the branch face_julian at https://github.com/Roboy/RoboyUnityFace
+More detailed information is given in the README in https://github.com/Roboy/RoboyUnityFace/tree/face_julian
 
 In order to start the animations, it is necessary to disconnect from ROS. Otherwise, Unity will show an error message.  This can be avoided by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs . The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
 
