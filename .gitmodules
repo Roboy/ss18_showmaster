@@ -19,3 +19,6 @@
 [submodule "roboy_snapchat"]
 	path = roboy_snapchat
 	url = https://github.com/Roboy/roboy_snapchat.git
+[submodule "ros_ncs"]
+	path = ros_ncs
+	url = https://github.com/Roboy/ros_intel_movidius_ncs
