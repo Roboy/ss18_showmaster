@@ -46,7 +46,7 @@ Three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_di
 ## Getting Started
 
 ### Prequisites and Setup
-- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace) --> go to the branch: face_julian 
+- for Emotions refer to [RoboyUnityFace](https://github.com/Roboy/RoboyUnityFace)  
 - for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/tree/master/projects/roboy)
 - for Games refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
@@ -62,7 +62,7 @@ roscore
 Prerequesites: 
 - Installation of Unity
 
-To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git on your computer. 
+To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git to your computer. 
 
 More detailed information is given in the README in https://github.com/Roboy/RoboyUnityFace
 
