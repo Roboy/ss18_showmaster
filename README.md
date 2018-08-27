@@ -18,15 +18,13 @@ Roboy Showmaster team wants to combine these sections to have an immersive and e
 ### 1. Facial Expressions
 
 Roboy's facial expressions are animated in Unity. The corresponding repository is in https://github.com/Roboy/RoboyUnityFace  
-Futher instructions and documentation can be found in the README https://github.com/Roboy/RoboyUnityFace/tree/face_julian 
 
-In addition to the old faces and expressions in Unity, the following faces & emotions were added in SS18 by animating them in Unity and can be triggered via ROS:
- - suprised Roboy
- - crying Roboy
- - irritated Roboy
- - Roboy wearing sunglasses
- - Roboy wearing spectacles
- - Roboy having a moustache
+In addition to the old faces and expressions in Unity, the following faces & emotions were added in SS18 by animating them in Unity and can be triggered via dialogue and manually via the keyboard (useful for fairs):
+ - tongue out (keyboard : D), happy (Q), lucky (Y), pissed (N), angry (A), irritated (X), hypno eyes (V), colored hypno eyes (U), rolling  eyes (I), surprised (Z), pirate (P), cryingRoboy (C), glasses (G), moustache (M), pink sunglasses (F)
+ 
+Futher instructions and documentation can be found in the README https://github.com/Roboy/RoboyUnityFace
+
+ 
  
 ### 2. Generative Models for Chitchat as a Fallback-Answer
 The new model is originating from Facebooks Dialog Research Platform [ParlAI](https://github.com/Roboy/ParlAI/). There, several state of the art implementations as well as several datasets are integrated in one platform. For Roboy, the profilememory implementation was choosen based on the Personachat dataset. 
@@ -66,18 +64,7 @@ Prerequesites:
 
 To start, clone the repository https://github.com/Roboy/RoboyUnityFace.git on your computer. 
 
-More detailed information is given in the README in https://github.com/Roboy/RoboyUnityFace/tree/face_julian
-
-In order to start the animations, it is necessary to disconnect from ROS. Otherwise, Unity will show an error message.  This can be avoided by changing the code in RoboyUnityFace/Assets/RoboyAnimator.cs . The line which must be changed looks like follows. In this line of code, the offline toggle should be set to true.
-
-```
-bool offlineToggle = true;
-```
-
-Now, all existing animations can be triggered in Unity by starting the play mode and by triggering animations in the Animator column. 
-
-Additional faces could be added. Useful tutorials for starting with Unity can be found on YouTube and on the Unity homepage.
-
+More detailed information is given in the README in https://github.com/Roboy/RoboyUnityFace
 
 #### ParlAI
 Prerequisites
