@@ -1,0 +1,24 @@
+[submodule "roboy_communication"]
+	path = roboy_communication
+	url = https://github.com/Roboy/roboy_communication.git
+	ignore = untracked
+[submodule "roboy_dialog"]
+	path = roboy_dialog
+	url = https://github.com/Roboy/roboy_dialog.git
+	branch = devel
+[submodule "RoboyUnityFace"]
+	path = RoboyUnityFace
+	url = git@github.com:Roboy/RoboyUnityFace.git
+	ignore = untracked
+[submodule "roboy_face"]
+	path = roboy_face
+	url = git@github.com:Roboy/roboy_face.git
+[submodule "ParlAI"]
+	path = ParlAI
+	url = https://github.com/Roboy/ParlAI.git
+[submodule "roboy_snapchat"]
+	path = roboy_snapchat
+	url = https://github.com/Roboy/roboy_snapchat.git
+[submodule "ros_ncs"]
+	path = ros_ncs
+	url = https://github.com/Roboy/ros_intel_movidius_ncs
