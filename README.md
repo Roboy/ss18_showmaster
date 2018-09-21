@@ -43,7 +43,7 @@ For playing games, three new states for the Roboy [Dialog System](https://github
 ### 6. Dialog Fair Show
 The goal of the Fair Show is to have an autonomous interaction between Roboy and the visitor on fairs. Autonomous in this case means that Roboy can perceive his environment and can start a conversation on his own if a person is interested. Students no longer need to start the according programs.
 
-<img src="https://github.com/Roboy/ss18_showmaster/blob/devel/fairshow_diagram.jpg" width="200" height="200" />
+<img src="https://github.com/Roboy/ss18_showmaster/blob/devel/fairshow_diagram.jpg" width="400" height="500" />
 
 ## Getting Started
 ### Prequisites and Setup
