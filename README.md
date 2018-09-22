@@ -51,7 +51,7 @@ The goal of the Fair Show is to have an autonomous interaction between Roboy and
 - for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/tree/master/projects/roboy)
 - for Dialog refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
-- for Vision with Neural Computing Sticks refer to [ros_intel_movidius_ncs](https://github.com/Roboy/ros_intel_movidius_ncs)
+- for Vision with Neural Computing Sticks refer to [Roboy/ros_intel_movidius_ncs](https://github.com/Roboy/ros_intel_movidius_ncs)
 
 ## Running the Code
 ### Running ROS-Master
