@@ -41,7 +41,7 @@ For playing games, three new states for the Roboy [Dialog System](https://github
 - A Choose Game State where Roboy suggests one of the above mentioned games by random choice or the interlocutor can selcet a preferred game
 
 ### 6. Dialog Fair Show
-The goal of the Fair Show is to have an autonomous interaction between Roboy and the visitor on fairs. Autonomous in this case means that Roboy can perceive his environment and can start a conversation on his own if a person is interested. Students no longer need to start the according programs.
+The goal of the Fair Show is to have an autonomous interaction between Roboy and the visitor on fairs. Autonomous in this case means that Roboy can perceive his environment and can start a conversation on his own if a person is interested/listening. Roboy students no longer need to control the according programs.
 
 <img src="https://github.com/Roboy/ss18_showmaster/blob/devel/fairshow_diagram.jpg" width="500" height="400" />
 
@@ -51,7 +51,7 @@ The goal of the Fair Show is to have an autonomous interaction between Roboy and
 - for ParlAI refer to [ParlAI](https://github.com/Roboy/ParlAI/tree/master/projects/roboy)
 - for Dialog refer to [Roboy_Dialog](https://github.com/Roboy/roboy_dialog)
 - for Snapchat refer to [Roboy_Snapchat](https://github.com/Roboy/roboy_snapchat)
-- for Vision with Computing Sticks refer to .....
+- for Vision with Neural Computing Sticks refer to [ros_intel_movidius_ncs](https://github.com/Roboy/ros_intel_movidius_ncs)
 
 ## Running the Code
 ### Running ROS-Master
@@ -99,7 +99,7 @@ rosrun roboy_snapchat_filter snapchat_server.py
 
 ### Games or FairShow?
 #### For Games
-In config.properties of the Dialog Code make sure the following parameters are set correctly:
+In config.properties of the Dialog code make sure the following parameters are set correctly:
 - enable ROS
 ```
 ROS_ENABLED: true
