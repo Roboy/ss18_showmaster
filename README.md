@@ -28,8 +28,8 @@ The new model is originating from Facebooks Dialog Research Platform [ParlAI](ht
 This module is able to apply filter masks on the interlocutor's face. Following filters are implemented: Roboy mask, mustache, pixelated sunglasses, flies, hat, crown and rainbow. The algorithm uses OpenCV and dlib library finding 68 facial landmarks to detect the most important face charateristics and to estimate the tilt angle of the face. The required filter mask is then applied automatically in-face superposition in real time.
 The ROS Service Server receives service calls from the dialog as Strings that hold the desired filter. The snapchat module then uses the video information from Roboy's camera to appliy the requested filter onto the detected faces.
 
-### 4. Vision Module using Compute Sticks
-dkhfjösldkfghdkjlöfopugfihklövskfoöupdj
+### 4. Vision Module using Neural Compute Sticks
+The Movidius™ Neural Compute Stick ([NCS](https://developer.movidius.com/)) is a tiny fanless deep learning device that allows us to run a live video stream for detecting and classifying persons and objects without heavy GPU power. When presenting Roboy on fairs or events, Neural Compute Sticks and nuke computer are needed only to run the vision module for the [Dialog Fair Show](#dialog-fair-show). Through vision Roboy is able to extract information about his environment which guides through the different states in the Dialog Fair Show.
 
 ### 5. Dialog Games
 For playing games, three new states for the Roboy [Dialog System](https://github.com/Roboy/roboy_dialog) are implemented: 
